@@ -16,7 +16,10 @@ namespace BuildBoost
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new BuildEasyBoostForm());
+			g_MainForm = new BuildEasyBoostForm();
+			Application.Run(g_MainForm);
 		}
+
+		public static BuildEasyBoostForm g_MainForm;
 	}
 }

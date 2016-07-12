@@ -48,22 +48,33 @@
 			this.textBox_path = new System.Windows.Forms.TextBox();
 			this.groupBox6 = new System.Windows.Forms.GroupBox();
 			this.textBox_cmd = new System.Windows.Forms.TextBox();
+			this.checkBox_selall = new System.Windows.Forms.CheckBox();
+			this.groupBox7 = new System.Windows.Forms.GroupBox();
+			this.groupBox8 = new System.Windows.Forms.GroupBox();
+			this.radioButton_64 = new System.Windows.Forms.RadioButton();
+			this.radioButton_32 = new System.Windows.Forms.RadioButton();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox3.SuspendLayout();
 			this.groupBox4.SuspendLayout();
 			this.groupBox5.SuspendLayout();
 			this.groupBox6.SuspendLayout();
+			this.groupBox7.SuspendLayout();
+			this.groupBox8.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// lib_list
 			// 
-			this.lib_list.Location = new System.Drawing.Point(20, 21);
+			this.lib_list.CheckBoxes = true;
+			this.lib_list.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+			this.lib_list.LabelWrap = false;
+			this.lib_list.Location = new System.Drawing.Point(6, 25);
 			this.lib_list.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.lib_list.Name = "lib_list";
-			this.lib_list.Size = new System.Drawing.Size(125, 344);
+			this.lib_list.Size = new System.Drawing.Size(187, 403);
 			this.lib_list.TabIndex = 1;
 			this.lib_list.UseCompatibleStateImageBehavior = false;
+			this.lib_list.View = System.Windows.Forms.View.SmallIcon;
 			// 
 			// toolsetCombo
 			// 
@@ -161,39 +172,39 @@
 			// 
 			this.groupBox1.Controls.Add(this.checkBox_link_static);
 			this.groupBox1.Controls.Add(this.checkBox_link_shared);
-			this.groupBox1.Location = new System.Drawing.Point(152, 231);
+			this.groupBox1.Location = new System.Drawing.Point(219, 253);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(299, 64);
 			this.groupBox1.TabIndex = 3;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "--link";
+			this.groupBox1.Text = "link";
 			// 
 			// groupBox2
 			// 
 			this.groupBox2.Controls.Add(this.checkBox_rtl_static);
 			this.groupBox2.Controls.Add(this.checkBox_rtl_shared);
-			this.groupBox2.Location = new System.Drawing.Point(152, 161);
+			this.groupBox2.Location = new System.Drawing.Point(219, 171);
 			this.groupBox2.Name = "groupBox2";
 			this.groupBox2.Size = new System.Drawing.Size(299, 64);
 			this.groupBox2.TabIndex = 4;
 			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "--runtime-link";
+			this.groupBox2.Text = "runtime-link";
 			// 
 			// groupBox3
 			// 
 			this.groupBox3.Controls.Add(this.checkBox_thread_multi);
 			this.groupBox3.Controls.Add(this.checkBox_thread_single);
-			this.groupBox3.Location = new System.Drawing.Point(152, 91);
+			this.groupBox3.Location = new System.Drawing.Point(219, 89);
 			this.groupBox3.Name = "groupBox3";
 			this.groupBox3.Size = new System.Drawing.Size(299, 64);
 			this.groupBox3.TabIndex = 5;
 			this.groupBox3.TabStop = false;
-			this.groupBox3.Text = "--threading";
+			this.groupBox3.Text = "threading";
 			// 
 			// groupBox4
 			// 
 			this.groupBox4.Controls.Add(this.toolsetCombo);
-			this.groupBox4.Location = new System.Drawing.Point(152, 21);
+			this.groupBox4.Location = new System.Drawing.Point(224, 7);
 			this.groupBox4.Name = "groupBox4";
 			this.groupBox4.Size = new System.Drawing.Size(299, 64);
 			this.groupBox4.TabIndex = 3;
@@ -204,7 +215,7 @@
 			// 
 			this.groupBox5.Controls.Add(this.checkBox_release);
 			this.groupBox5.Controls.Add(this.checkBox_debug);
-			this.groupBox5.Location = new System.Drawing.Point(152, 301);
+			this.groupBox5.Location = new System.Drawing.Point(219, 335);
 			this.groupBox5.Name = "groupBox5";
 			this.groupBox5.Size = new System.Drawing.Size(299, 64);
 			this.groupBox5.TabIndex = 7;
@@ -213,7 +224,7 @@
 			// 
 			// btn_start
 			// 
-			this.btn_start.Location = new System.Drawing.Point(342, 535);
+			this.btn_start.Location = new System.Drawing.Point(414, 649);
 			this.btn_start.Name = "btn_start";
 			this.btn_start.Size = new System.Drawing.Size(109, 34);
 			this.btn_start.TabIndex = 2;
@@ -223,9 +234,9 @@
 			// 
 			// btn_set
 			// 
-			this.btn_set.Location = new System.Drawing.Point(20, 373);
+			this.btn_set.Location = new System.Drawing.Point(13, 487);
 			this.btn_set.Name = "btn_set";
-			this.btn_set.Size = new System.Drawing.Size(125, 38);
+			this.btn_set.Size = new System.Drawing.Size(200, 38);
 			this.btn_set.TabIndex = 0;
 			this.btn_set.Text = "set boost path";
 			this.btn_set.UseVisualStyleBackColor = true;
@@ -235,7 +246,7 @@
 			// 
 			this.textBox_path.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.textBox_path.Enabled = false;
-			this.textBox_path.Location = new System.Drawing.Point(152, 380);
+			this.textBox_path.Location = new System.Drawing.Point(219, 497);
 			this.textBox_path.Name = "textBox_path";
 			this.textBox_path.Size = new System.Drawing.Size(299, 20);
 			this.textBox_path.TabIndex = 10;
@@ -243,9 +254,9 @@
 			// groupBox6
 			// 
 			this.groupBox6.Controls.Add(this.textBox_cmd);
-			this.groupBox6.Location = new System.Drawing.Point(20, 417);
+			this.groupBox6.Location = new System.Drawing.Point(20, 531);
 			this.groupBox6.Name = "groupBox6";
-			this.groupBox6.Size = new System.Drawing.Size(431, 112);
+			this.groupBox6.Size = new System.Drawing.Size(498, 112);
 			this.groupBox6.TabIndex = 11;
 			this.groupBox6.TabStop = false;
 			this.groupBox6.Text = "command line";
@@ -253,18 +264,77 @@
 			// textBox_cmd
 			// 
 			this.textBox_cmd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox_cmd.Enabled = false;
-			this.textBox_cmd.Location = new System.Drawing.Point(6, 20);
+			this.textBox_cmd.Location = new System.Drawing.Point(6, 19);
 			this.textBox_cmd.Multiline = true;
 			this.textBox_cmd.Name = "textBox_cmd";
-			this.textBox_cmd.Size = new System.Drawing.Size(419, 86);
+			this.textBox_cmd.ReadOnly = true;
+			this.textBox_cmd.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.textBox_cmd.Size = new System.Drawing.Size(486, 87);
 			this.textBox_cmd.TabIndex = 0;
+			// 
+			// checkBox_selall
+			// 
+			this.checkBox_selall.AutoSize = true;
+			this.checkBox_selall.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.checkBox_selall.Location = new System.Drawing.Point(103, 436);
+			this.checkBox_selall.Name = "checkBox_selall";
+			this.checkBox_selall.Size = new System.Drawing.Size(90, 23);
+			this.checkBox_selall.TabIndex = 12;
+			this.checkBox_selall.Text = "select all";
+			this.checkBox_selall.UseVisualStyleBackColor = true;
+			this.checkBox_selall.CheckedChanged += new System.EventHandler(this.checkBox_selall_CheckedChanged);
+			// 
+			// groupBox7
+			// 
+			this.groupBox7.Controls.Add(this.lib_list);
+			this.groupBox7.Controls.Add(this.checkBox_selall);
+			this.groupBox7.Location = new System.Drawing.Point(13, 7);
+			this.groupBox7.Name = "groupBox7";
+			this.groupBox7.Size = new System.Drawing.Size(200, 474);
+			this.groupBox7.TabIndex = 13;
+			this.groupBox7.TabStop = false;
+			this.groupBox7.Text = "libraries";
+			// 
+			// groupBox8
+			// 
+			this.groupBox8.Controls.Add(this.radioButton_64);
+			this.groupBox8.Controls.Add(this.radioButton_32);
+			this.groupBox8.Location = new System.Drawing.Point(219, 417);
+			this.groupBox8.Name = "groupBox8";
+			this.groupBox8.Size = new System.Drawing.Size(299, 64);
+			this.groupBox8.TabIndex = 14;
+			this.groupBox8.TabStop = false;
+			this.groupBox8.Text = "address-model";
+			// 
+			// radioButton_64
+			// 
+			this.radioButton_64.AutoSize = true;
+			this.radioButton_64.Location = new System.Drawing.Point(190, 25);
+			this.radioButton_64.Name = "radioButton_64";
+			this.radioButton_64.Size = new System.Drawing.Size(76, 23);
+			this.radioButton_64.TabIndex = 1;
+			this.radioButton_64.TabStop = true;
+			this.radioButton_64.Text = "amd64";
+			this.radioButton_64.UseVisualStyleBackColor = true;
+			// 
+			// radioButton_32
+			// 
+			this.radioButton_32.AutoSize = true;
+			this.radioButton_32.Location = new System.Drawing.Point(51, 26);
+			this.radioButton_32.Name = "radioButton_32";
+			this.radioButton_32.Size = new System.Drawing.Size(53, 23);
+			this.radioButton_32.TabIndex = 0;
+			this.radioButton_32.TabStop = true;
+			this.radioButton_32.Text = "x86";
+			this.radioButton_32.UseVisualStyleBackColor = true;
 			// 
 			// BuildEasyBoostForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(472, 581);
+			this.ClientSize = new System.Drawing.Size(535, 690);
+			this.Controls.Add(this.groupBox8);
+			this.Controls.Add(this.groupBox7);
 			this.Controls.Add(this.groupBox6);
 			this.Controls.Add(this.textBox_path);
 			this.Controls.Add(this.btn_set);
@@ -274,7 +344,6 @@
 			this.Controls.Add(this.groupBox3);
 			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.groupBox1);
-			this.Controls.Add(this.lib_list);
 			this.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.MaximizeBox = false;
@@ -292,6 +361,10 @@
 			this.groupBox5.PerformLayout();
 			this.groupBox6.ResumeLayout(false);
 			this.groupBox6.PerformLayout();
+			this.groupBox7.ResumeLayout(false);
+			this.groupBox7.PerformLayout();
+			this.groupBox8.ResumeLayout(false);
+			this.groupBox8.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -319,6 +392,11 @@
 		private System.Windows.Forms.TextBox textBox_path;
 		private System.Windows.Forms.GroupBox groupBox6;
 		private System.Windows.Forms.TextBox textBox_cmd;
+		private System.Windows.Forms.CheckBox checkBox_selall;
+		private System.Windows.Forms.GroupBox groupBox7;
+		private System.Windows.Forms.GroupBox groupBox8;
+		private System.Windows.Forms.RadioButton radioButton_64;
+		private System.Windows.Forms.RadioButton radioButton_32;
 	}
 }
 
