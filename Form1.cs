@@ -18,6 +18,7 @@ namespace BuildBoost
 	{
 		public BuildEasyBoostForm()
 		{
+			m_bStartEvent = false;
 			InitializeComponent();
 			setAllControlEnable(false);
 			setAllControlData();
@@ -26,9 +27,7 @@ namespace BuildBoost
 		{
 			if (!checkInput()) return;
 
-			string op = "bjam stage architecture=x86" + getToolset() + makeStageDir() +
-				getLink() + getRuntimeLink() + getThreading() + getDebugRelease() +
-				getAddressModel() + getLibraries();
+			string op = getOptionString();
 
 			string fileName = Path.GetRandomFileName();
 			fileName = fileName.Remove(fileName.IndexOf("."), 3);
@@ -38,8 +37,6 @@ namespace BuildBoost
 			writer.Write(op);
 			writer.Write("\npause");
 			writer.Close();
-
-			textBox_cmd.Text = op;
 
 			BuildBoost.Program.g_MainForm.Visible = false;
 
@@ -137,6 +134,7 @@ namespace BuildBoost
 
 			initLibarayList();
 			initMSVCList();
+			m_bStartEvent = true;
 			return;
 		}
 		private void initLibarayList()
@@ -273,5 +271,20 @@ namespace BuildBoost
 			}
 			return op;
 		}
+
+		private void optionChanged(object sender, EventArgs e)
+		{
+			textBox_cmd.Text = getOptionString();
+		}
+		private string getOptionString()
+		{
+			if (m_bStartEvent)
+				return "bjam stage architecture=x86" + getToolset() + makeStageDir() +
+				getLink() + getRuntimeLink() + getThreading() + getDebugRelease() +
+				getAddressModel() + getLibraries();
+			return "";
+		}
+		private bool m_bStartEvent;
+
 	}
 }

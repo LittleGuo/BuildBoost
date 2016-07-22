@@ -75,6 +75,8 @@
 			this.lib_list.TabIndex = 1;
 			this.lib_list.UseCompatibleStateImageBehavior = false;
 			this.lib_list.View = System.Windows.Forms.View.SmallIcon;
+			//this.lib_list.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.optionChanged);
+			this.lib_list.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.optionChanged);
 			// 
 			// toolsetCombo
 			// 
@@ -86,6 +88,7 @@
 			this.toolsetCombo.Name = "toolsetCombo";
 			this.toolsetCombo.Size = new System.Drawing.Size(202, 27);
 			this.toolsetCombo.TabIndex = 0;
+			this.toolsetCombo.SelectedIndexChanged += new System.EventHandler(this.optionChanged);
 			// 
 			// checkBox_debug
 			// 
@@ -96,6 +99,7 @@
 			this.checkBox_debug.TabIndex = 0;
 			this.checkBox_debug.Text = "debug";
 			this.checkBox_debug.UseVisualStyleBackColor = true;
+			this.checkBox_debug.CheckedChanged += new System.EventHandler(this.optionChanged);
 			// 
 			// checkBox_release
 			// 
@@ -106,6 +110,7 @@
 			this.checkBox_release.TabIndex = 1;
 			this.checkBox_release.Text = "release";
 			this.checkBox_release.UseVisualStyleBackColor = true;
+			this.checkBox_release.CheckedChanged += new System.EventHandler(this.optionChanged);
 			// 
 			// checkBox_rtl_shared
 			// 
@@ -116,6 +121,7 @@
 			this.checkBox_rtl_shared.TabIndex = 0;
 			this.checkBox_rtl_shared.Text = "shared";
 			this.checkBox_rtl_shared.UseVisualStyleBackColor = true;
+			this.checkBox_rtl_shared.CheckedChanged += new System.EventHandler(this.optionChanged);
 			// 
 			// checkBox_rtl_static
 			// 
@@ -126,6 +132,7 @@
 			this.checkBox_rtl_static.TabIndex = 1;
 			this.checkBox_rtl_static.Text = "static";
 			this.checkBox_rtl_static.UseVisualStyleBackColor = true;
+			this.checkBox_rtl_static.CheckedChanged += new System.EventHandler(this.optionChanged);
 			// 
 			// checkBox_thread_multi
 			// 
@@ -137,6 +144,7 @@
 			this.checkBox_thread_multi.Text = "multi";
 			this.checkBox_thread_multi.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			this.checkBox_thread_multi.UseVisualStyleBackColor = true;
+			this.checkBox_thread_multi.CheckedChanged += new System.EventHandler(this.optionChanged);
 			// 
 			// checkBox_thread_single
 			// 
@@ -147,6 +155,7 @@
 			this.checkBox_thread_single.TabIndex = 1;
 			this.checkBox_thread_single.Text = "single";
 			this.checkBox_thread_single.UseVisualStyleBackColor = true;
+			this.checkBox_thread_single.CheckedChanged += new System.EventHandler(this.optionChanged);
 			// 
 			// checkBox_link_shared
 			// 
@@ -157,6 +166,7 @@
 			this.checkBox_link_shared.TabIndex = 0;
 			this.checkBox_link_shared.Text = "shared";
 			this.checkBox_link_shared.UseVisualStyleBackColor = true;
+			this.checkBox_link_shared.CheckedChanged += new System.EventHandler(this.optionChanged);
 			// 
 			// checkBox_link_static
 			// 
@@ -167,6 +177,7 @@
 			this.checkBox_link_static.TabIndex = 1;
 			this.checkBox_link_static.Text = "static";
 			this.checkBox_link_static.UseVisualStyleBackColor = true;
+			this.checkBox_link_static.CheckedChanged += new System.EventHandler(this.optionChanged);
 			// 
 			// groupBox1
 			// 
@@ -316,6 +327,7 @@
 			this.radioButton_64.TabStop = true;
 			this.radioButton_64.Text = "amd64";
 			this.radioButton_64.UseVisualStyleBackColor = true;
+			this.radioButton_64.CheckedChanged += new System.EventHandler(this.optionChanged);
 			// 
 			// radioButton_32
 			// 
@@ -327,6 +339,7 @@
 			this.radioButton_32.TabStop = true;
 			this.radioButton_32.Text = "x86";
 			this.radioButton_32.UseVisualStyleBackColor = true;
+			this.radioButton_32.CheckedChanged += new System.EventHandler(this.optionChanged);
 			// 
 			// BuildEasyBoostForm
 			// 
